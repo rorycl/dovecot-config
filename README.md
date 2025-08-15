@@ -11,7 +11,7 @@ is insecure.
 
 ## starter config
 
-Grab the minimal [dovecot.conf](./dovecot.conf) and [user.db](./user.db)
+Grab the minimal [dovecot.conf](./dovecot.conf) and [users.db](./users.db)
 and put them somewhere, perhaps `/tmp/dovecot`.
 
 The main configuration reference for Dovecot CE 2.4.x is
