@@ -86,7 +86,8 @@ Other examples:
 
 * [two-userdbs](./two-userdbs/)  
   use of two different userdbs, each both for the user and pass
-  databases.
+  databases. This also shows the use of the `userdb_result_failure` and
+  `userdb_result_success` configuration directives.
 * [no-domain](./no-domain/)  
   use of the same userdb, both for domain-less and "with" domain logins.
 
