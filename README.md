@@ -1,20 +1,23 @@
 # dovecot 2.4 config
 
-Minimal docker setup for testing dovecot 2.4 configuration, particularly
-for testing auth.
+Minimal docker setup for testing dovecot 2.4 configurations.
 
-Please DO NOT use the test configuration file below in production -- it
-is insecure.
+> [!WARNING]
+> The dovecot.conf file provided here is insecure.
 
-## starter config
+Contents
+
+* [config](#config)
+* [run](#run)
+* [test](#test)
+* [notes](#notes)
+
+## config
 
 Grab the minimal [dovecot.conf](./dovecot.conf) and [users.db](./users.db)
 and put them somewhere, perhaps `/tmp/dovecot`.
 
-The main configuration reference for Dovecot CE 2.4.x is
-[here](https://doc.dovecot.org/2.4.1/core/settings/variables.html).
-
-## run docker
+## run 
 
 An example docker invocation, with configuration loaded from 
 `/tmp/dovecot`, which also holds the `users.db` file.
@@ -25,10 +28,7 @@ docker run -p 1143:143 -p 1993:993 \
               dovecot/dovecot:latest
 ```
 
-## testing
-
-Have a look at the [Dovecot testing
-guide](https://doc.dovecot.org/main/core/admin/testing.html).
+## test
 
 Example login with no domain, using `auth_default_domain`
 
@@ -80,6 +80,12 @@ Aug 15 17:06:02 imap-login: Info: Logged in: user=<tom@example.com>, method=PLAI
 ```
 
 ## notes
+
+The main configuration reference for Dovecot CE 2.4.x is
+[here](https://doc.dovecot.org/2.4.1/core/settings/variables.html).
+
+Have a look at the [Dovecot testing
+guide](https://doc.dovecot.org/main/core/admin/testing.html).
 
 The "Upgrading Dovecot CE from 2.3 to 2.4" docs are
 [here](https://doc.dovecot.org/main/installation/upgrade/2.3-to-2.4.html)
