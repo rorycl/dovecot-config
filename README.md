@@ -45,7 +45,7 @@ a OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT
 Example login with specified domain:
 
 ```
-rory:~$ nc 127.0.0.1 1143
+$ nc 127.0.0.1 1143
 * OK [CAPABILITY IMAP4rev1 LOGIN-REFERRALS ID ENABLE IDLE SASL-IR
   LITERAL+ AUTH=PLAIN] Dovecot ready.
 a login terry@another.com test
@@ -78,6 +78,16 @@ Aug 15 17:06:02 auth(tom@example.com,172.17.0.1,sasl:plain)<Cd5NZ2o8ZpysEQAB>: D
 Aug 15 17:06:02 auth: Debug: master userdb out: USER	3342336001	tom@example.com	uid=1000	gid=1000	home=/srv/mail/tom	auth_mech=PLAIN	auth_token=1da9be7cba83819ae2d93a33e448d52ddeec144f	auth_user=tom
 Aug 15 17:06:02 imap-login: Info: Logged in: user=<tom@example.com>, method=PLAIN, rip=172.17.0.1, lip=172.17.0.2, mpid=15, session=<Cd5NZ2o8ZpysEQAB>
 ```
+
+## notes
+
+The "Upgrading Dovecot CE from 2.3 to 2.4" docs are
+[here](https://doc.dovecot.org/main/installation/upgrade/2.3-to-2.4.html)
+and include a link to an example config for 2.4 at
+https://github.com/dovecot/tools/blob/main/dovecot-2.4.0-example-config.tar.gz
+
+The configuration included with the docker image can be read by using
+`docker container export ...` which writes to a tar file.
 
 ## licence
 
