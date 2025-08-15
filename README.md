@@ -10,6 +10,7 @@ Contents
 * [config](#config)
 * [run](#run)
 * [test](#test)
+* [examples](#examples)
 * [notes](#notes)
 
 ## config
@@ -86,6 +87,8 @@ Other examples:
 * [two-userdbs](./two-userdbs/)  
   use of two different userdbs, each both for the user and pass
   databases.
+* [no-domain](./no-domain/)
+  use of the same userdb, both for domain-less and "with" domain logins.
 
 ## notes
 
