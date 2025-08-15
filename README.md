@@ -79,6 +79,14 @@ Aug 15 17:06:02 auth: Debug: master userdb out: USER	3342336001	tom@example.com	
 Aug 15 17:06:02 imap-login: Info: Logged in: user=<tom@example.com>, method=PLAIN, rip=172.17.0.1, lip=172.17.0.2, mpid=15, session=<Cd5NZ2o8ZpysEQAB>
 ```
 
+## examples
+
+Other examples:
+
+* [two-userdbs](./two-userdbs/)  
+  use of two different userdbs, each both for the user and pass
+  databases.
+
 ## notes
 
 The main configuration reference for Dovecot CE 2.4.x is
