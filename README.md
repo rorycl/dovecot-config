@@ -55,7 +55,7 @@ a OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT
 ```
 
 The dovecot config provided here logs to `/dev/stderr`, and produces
-output along the lines below. Note the expansion to "tom@example.com".
+output along the lines below. Note the expansion to `tom@example.com`.
 
 ```
 Aug 15 17:05:53 master: Info: Dovecot v2.4.1 (7d8c0e5759) starting up for imap
@@ -79,3 +79,6 @@ Aug 15 17:06:02 auth: Debug: master userdb out: USER	3342336001	tom@example.com	
 Aug 15 17:06:02 imap-login: Info: Logged in: user=<tom@example.com>, method=PLAIN, rip=172.17.0.1, lip=172.17.0.2, mpid=15, session=<Cd5NZ2o8ZpysEQAB>
 ```
 
+## licence
+
+MIT
