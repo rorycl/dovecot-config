@@ -1,10 +1,7 @@
 # dovecot 2.4 config
 
-Minimal docker setup for testing dovecot 2.4 configuration changes,
-particularly for auth.
-
-This might be helpful if you are having trouble upgrading dovecot due to
-changes in Debian Trixie.
+Minimal docker setup for testing dovecot 2.4 configuration, particularly
+for testing auth.
 
 Please DO NOT use the test configuration file below in production -- it
 is insecure.
@@ -19,13 +16,13 @@ The main configuration reference for Dovecot CE 2.4.x is
 
 ## run docker
 
-An example docker invocation, with configuration pointed to
-`/tmp/dovecot` and the .
+An example docker invocation, with configuration loaded from 
+`/tmp/dovecot`, which also holds the `users.db` file.
 
 ```
 docker run -p 1143:143 -p 1993:993 \
            -v /tmp/dovecot:/etc/dovecot \
-           dovecot/dovecot:latest
+              dovecot/dovecot:latest
 ```
 
 ## testing
