@@ -1,0 +1,51 @@
+Aug 15 19:30:35 master: Info: Dovecot v2.4.1 (7d8c0e5759) starting up for imap
+Aug 15 19:30:38 auth: Debug: Loading modules from directory: /dovecot/lib/dovecot/modules/auth
+Aug 15 19:30:38 auth: Debug: Module loaded: /dovecot/lib/dovecot/modules/auth/libdriver_mysql.so
+Aug 15 19:30:38 auth: Debug: Module loaded: /dovecot/lib/dovecot/modules/auth/libdriver_pgsql.so
+Aug 15 19:30:38 auth: Debug: Module loaded: /dovecot/lib/dovecot/modules/auth/libdriver_sqlite.so
+Aug 15 19:30:38 auth: Debug: Wrote new auth token secret to /run/dovecot/auth-token-secret.dat
+Aug 15 19:30:38 auth: Debug: passwd-file /etc/dovecot/users.db:Read 2 users in 0 secs
+Aug 15 19:30:38 auth: Debug: conn unix:login (pid=11,uid=1000) [1]: Server accepted connection (fd=19)
+Aug 15 19:30:38 auth: Debug: conn unix:login (pid=11,uid=1000) [1]: auth client connected (pid=11)
+Aug 15 19:30:47 auth: Debug: conn unix:login (pid=11,uid=1000) [1]: client in: AUTH	1	PLAIN	protocol=imap	final-resp-ok	session=z0a/bGw8OKKsEQAB	lip=172.17.0.2	rip=172.17.0.1	lport=143	rport=41528	resp=<hidden>
+Aug 15 19:30:47 auth(tom,172.17.0.1,sasl:plain)<z0a/bGw8OKKsEQAB>: Debug: user-only: Performing passdb lookup
+Aug 15 19:30:47 auth(tom,172.17.0.1,sasl:plain)<z0a/bGw8OKKsEQAB>: Debug: user-only: lookup: user=tom file=/etc/dovecot/users.db
+Aug 15 19:30:47 auth(tom,172.17.0.1,sasl:plain)<z0a/bGw8OKKsEQAB>: Debug: user-only: Finished passdb lookup
+Aug 15 19:30:47 auth(tom,172.17.0.1,sasl:plain)<z0a/bGw8OKKsEQAB>: Debug: Auth request finished
+Aug 15 19:30:47 auth: Debug: conn unix:login (pid=11,uid=1000) [1]: client passdb out: OK	1	user=tom	:=
+Aug 15 19:30:47 auth: Debug: conn unix:/run/dovecot/auth-master (pid=14,uid=1000): Server accepted connection (fd=20)
+Aug 15 19:30:47 auth: Debug: master in: REQUEST	3283877889	11	1	a3dda72af64a4c6638a9776b69692b35	session_pid=14	request_auth_token
+Aug 15 19:30:47 auth(tom,172.17.0.1,sasl:plain)<z0a/bGw8OKKsEQAB>: Debug: user-only: Performing userdb lookup
+Aug 15 19:30:47 auth(tom,172.17.0.1,sasl:plain)<z0a/bGw8OKKsEQAB>: Debug: user-only: lookup: user=tom file=/etc/dovecot/users.db
+Aug 15 19:30:47 auth(tom,172.17.0.1,sasl:plain)<z0a/bGw8OKKsEQAB>: Debug: user-only: Finished userdb lookup
+Aug 15 19:30:47 auth: Debug: master userdb out: USER	3283877889	tom	uid=1000	gid=1000	home=/srv/mail/tom	auth_mech=PLAIN	auth_token=c97e0c52bf62c1bccfa251a8343ec685ad1a6082
+Aug 15 19:30:47 imap-login: Info: Logged in: user=<tom>, method=PLAIN, rip=172.17.0.1, lip=172.17.0.2, mpid=14, session=<z0a/bGw8OKKsEQAB>
+Aug 15 19:30:47 auth: Debug: conn unix:login (pid=11,uid=1000) [1]: Disconnected: Connection closed (fd=19)
+Aug 15 19:30:47 auth: Debug: conn unix:/run/dovecot/auth-master (pid=14,uid=1000): auth-master client: Disconnected: Connection closed (fd=20) (created 5 msecs ago, handshake 5 msecs ago)
+Aug 15 19:30:58 imap(tom)<14><z0a/bGw8OKKsEQAB>: Info: Disconnected: Connection closed (No commands sent) in=0 out=452 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+Aug 15 19:31:03 auth: Debug: conn unix:login (pid=15,uid=1000) [2]: Server accepted connection (fd=19)
+Aug 15 19:31:03 auth: Debug: conn unix:login (pid=15,uid=1000) [2]: auth client connected (pid=15)
+Aug 15 19:31:22 auth: Debug: conn unix:login (pid=15,uid=1000) [2]: client in: AUTH	1	PLAIN	protocol=imap	final-resp-ok	session=Cvgxbmw88rSsEQAB	lip=172.17.0.2	rip=172.17.0.1	lport=143	rport=46322	resp=<hidden>
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user-only: Performing passdb lookup
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user-only: lookup: user=terry file=/etc/dovecot/users.db
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Info: user-only: unknown user
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user-only: Finished passdb lookup
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user_and_domain: Performing passdb lookup
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user_and_domain: lookup: user=terry@another.com file=/etc/dovecot/users.db
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user_and_domain: Finished passdb lookup
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: Auth request finished
+Aug 15 19:31:22 auth: Debug: conn unix:login (pid=15,uid=1000) [2]: client passdb out: OK	1	user=terry@another.com	:=
+Aug 15 19:31:22 auth: Debug: conn unix:/run/dovecot/auth-master (pid=16,uid=1000): Server accepted connection (fd=20)
+Aug 15 19:31:22 auth: Debug: master in: REQUEST	525598721	15	1	b74545bd9aa8e2b2e4abeff9a0aff059	session_pid=16	request_auth_token
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user-only: Performing userdb lookup
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user-only: lookup: user=terry file=/etc/dovecot/users.db
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Info: user-only: unknown user
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user-only: Finished userdb lookup
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user-and-domain: Performing userdb lookup
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user-and-domain: lookup: user=terry@another.com file=/etc/dovecot/users.db
+Aug 15 19:31:22 auth(terry@another.com,172.17.0.1,sasl:plain)<Cvgxbmw88rSsEQAB>: Debug: user-and-domain: Finished userdb lookup
+Aug 15 19:31:22 auth: Debug: master userdb out: USER	525598721	terry@another.com	uid=1000	gid=1000	home=/srv/mail/terry	auth_mech=PLAIN	auth_token=c1f1ad57a7e76fad4e11fcbe0c109c0aab4c3011
+Aug 15 19:31:22 imap-login: Info: Logged in: user=<terry@another.com>, method=PLAIN, rip=172.17.0.1, lip=172.17.0.2, mpid=16, session=<Cvgxbmw88rSsEQAB>
+Aug 15 19:31:22 auth: Debug: conn unix:login (pid=15,uid=1000) [2]: Disconnected: Connection closed (fd=19)
+Aug 15 19:31:22 auth: Debug: conn unix:/run/dovecot/auth-master (pid=16,uid=1000): auth-master client: Disconnected: Connection closed (fd=20) (created 1 msecs ago, handshake 1 msecs ago)
+Aug 15 19:31:24 imap(terry@another.com)<16><Cvgxbmw88rSsEQAB>: Info: Disconnected: Connection closed (No commands sent) in=0 out=452 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
