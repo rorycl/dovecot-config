@@ -58,7 +58,5 @@ Aug 23 13:29:36 imap(tom): Error: Plugin 'imap_metadata' not found from director
 
 ## log
 
-(no errors)
-
 See the [log](./log.txt).
 
