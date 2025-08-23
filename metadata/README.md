@@ -4,6 +4,9 @@ Example of using the `imap_metadata` flag for imap.
 
 See https://doc.dovecot.org/2.4.1/core/config/imap.html#metadata.
 
+> [!NOTE]
+> The imap_metadata flag appears not to be working.
+
 An example docker invocation, with configuration loaded from `this
 directory`, which also holds the `users.db` file.
 
