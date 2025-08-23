@@ -1,0 +1,25 @@
+Aug 23 13:29:26 master: Info: Dovecot v2.4.1 (7d8c0e5759) starting up for imap
+Aug 23 13:29:29 auth: Debug: Loading modules from directory: /dovecot/lib/dovecot/modules/auth
+Aug 23 13:29:29 auth: Debug: Module loaded: /dovecot/lib/dovecot/modules/auth/libdriver_mysql.so
+Aug 23 13:29:29 auth: Debug: Module loaded: /dovecot/lib/dovecot/modules/auth/libdriver_pgsql.so
+Aug 23 13:29:29 auth: Debug: Module loaded: /dovecot/lib/dovecot/modules/auth/libdriver_sqlite.so
+Aug 23 13:29:29 auth: Debug: Wrote new auth token secret to /run/dovecot/auth-token-secret.dat
+Aug 23 13:29:29 auth: Debug: passwd-file /etc/dovecot/users.db:Read 2 users in 0 secs
+Aug 23 13:29:29 auth: Debug: conn unix:login (pid=11,uid=1000) [1]: Server accepted connection (fd=19)
+Aug 23 13:29:29 auth: Debug: conn unix:login (pid=11,uid=1000) [1]: auth client connected (pid=11)
+Aug 23 13:29:36 auth: Debug: conn unix:login (pid=11,uid=1000) [1]: client in: AUTH	1	PLAIN	protocol=imap	final-resp-ok	session=Y1PkTwg9MN6sEQAB	lip=172.17.0.2	rip=172.17.0.1	lport=143	rport=56880	resp=<hidden>
+Aug 23 13:29:36 auth(tom,172.17.0.1,sasl:plain)<Y1PkTwg9MN6sEQAB>: Debug: user-only: Performing passdb lookup
+Aug 23 13:29:36 auth(tom,172.17.0.1,sasl:plain)<Y1PkTwg9MN6sEQAB>: Debug: user-only: lookup: user=tom file=/etc/dovecot/users.db
+Aug 23 13:29:36 auth(tom,172.17.0.1,sasl:plain)<Y1PkTwg9MN6sEQAB>: Debug: user-only: Finished passdb lookup
+Aug 23 13:29:36 auth(tom,172.17.0.1,sasl:plain)<Y1PkTwg9MN6sEQAB>: Debug: Auth request finished
+Aug 23 13:29:36 auth: Debug: conn unix:login (pid=11,uid=1000) [1]: client passdb out: OK	1	user=tom	:=
+Aug 23 13:29:36 auth: Debug: conn unix:/run/dovecot/auth-master (pid=14,uid=1000): Server accepted connection (fd=20)
+Aug 23 13:29:36 auth: Debug: master in: REQUEST	2489450497	11	1	d08cc5dd7ea84bdf5f4c098ed53416fe	session_pid=14	request_auth_token
+Aug 23 13:29:36 auth(tom,172.17.0.1,sasl:plain)<Y1PkTwg9MN6sEQAB>: Debug: user-only: Performing userdb lookup
+Aug 23 13:29:36 auth(tom,172.17.0.1,sasl:plain)<Y1PkTwg9MN6sEQAB>: Debug: user-only: lookup: user=tom file=/etc/dovecot/users.db
+Aug 23 13:29:36 auth(tom,172.17.0.1,sasl:plain)<Y1PkTwg9MN6sEQAB>: Debug: user-only: Finished userdb lookup
+Aug 23 13:29:36 auth: Debug: master userdb out: USER	2489450497	tom	uid=1000	gid=1000	home=/srv/mail/tom	auth_mech=PLAIN	auth_token=fb99a2123cff4e5f6abdc33b4b3346db8ea178e4
+Aug 23 13:29:36 imap(tom): Error: Plugin 'imap_metadata' not found from directory /dovecot/lib/dovecot/modules
+Aug 23 13:29:36 auth: Debug: conn unix:/run/dovecot/auth-master (pid=14,uid=1000): auth-master client: Disconnected: Connection closed (fd=20) (created 3 msecs ago, handshake 3 msecs ago)
+Aug 23 13:29:36 imap-login: Info: Logged in: user=<tom>, method=PLAIN, rip=172.17.0.1, lip=172.17.0.2, mpid=14, session=<Y1PkTwg9MN6sEQAB>
+Aug 23 13:29:36 auth: Debug: conn unix:login (pid=11,uid=1000) [1]: Disconnected: Connection closed (fd=19)
