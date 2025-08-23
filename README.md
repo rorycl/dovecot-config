@@ -90,6 +90,8 @@ Other examples:
   `userdb_result_success` configuration directives.
 * [no-domain](./no-domain/)  
   use of the same userdb, both for domain-less and "with" domain logins.
+* [metadata](./metadata/)  
+  check if imap metadata plugin is working.
 
 ## notes
 
