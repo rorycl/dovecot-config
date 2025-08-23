@@ -1,0 +1,4 @@
+Aug 23 20:41:40 master: Info: Dovecot v2.4.1 (7d8c0e5759) starting up for imap, lmtp
+Aug 23 20:41:56 auth-worker(tom,172.17.0.1)<14><vFoLWg49Br+sEQAB>: request [1]: Error: pam: pam_authenticate() failed: Authentication failure (/etc/pam.d/dovecot missing?)
+Aug 23 20:41:56 imap-login: Info: Logged in: user=<tom>, method=PLAIN, rip=172.17.0.1, lip=172.17.0.2, mpid=16, session=<vFoLWg49Br+sEQAB>
+Aug 23 20:42:02 imap(tom)<16><vFoLWg49Br+sEQAB>: Info: Disconnected: Connection closed (No commands sent) in=0 out=464 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0

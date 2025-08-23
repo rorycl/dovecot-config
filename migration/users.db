@@ -1,0 +1,4 @@
+# user:password:uid:gid:(gecos):home:(shell):extra_fields
+# passwords are blowfish/bcrypt encrypted 'test'
+tom:{BLF-CRYPT}$2y$05$MjT62.kd6moPSDMecRMO2.je72vbspldJlnf.HgaaNVMNfqhAS6uG:1000:1000::/srv/mail/tom:::
+terry@another.com:{BLF-CRYPT}$2y$05$MjT62.kd6moPSDMecRMO2.je72vbspldJlnf.HgaaNVMNfqhAS6uG:1000:1000::/srv/mail/terry:::
