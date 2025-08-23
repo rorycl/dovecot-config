@@ -92,6 +92,8 @@ Other examples:
   use of the same userdb, both for domain-less and "with" domain logins.
 * [metadata](./metadata/)  
   check if imap metadata plugin is working.
+* [migration](./migration/)  
+  an example of migrating an older dovecot.conf to the new 2.4 syntax.
 
 ## notes
 
