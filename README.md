@@ -2,6 +2,17 @@
 
 Minimal docker setup for testing dovecot 2.4 configurations.
 
+This repo provides a few example setups for running with the official
+[Dovecot Docker](https://hub.docker.com/r/dovecot/dovecot) image.
+
+If you are having difficulty upgrading your config to 2.4.x from a
+previous version of Dovecot, follow the instructions here to debug your
+upgraded settings.
+
+The basic procedure is to run the `config`, `run` and `test` steps
+adding in your configuration piece-by-piece to check your new
+configuration works.
+
 > [!WARNING]
 > The dovecot.conf file provided here is insecure.
 
@@ -16,16 +27,22 @@ Contents
 ## config
 
 Grab the minimal [dovecot.conf](./dovecot.conf) and [users.db](./users.db)
-and put them somewhere, perhaps `/tmp/dovecot`.
+here or in one of the example directories and invoke `docker run`.
+
+To modify variables from the Dovecot 2.3 or earlier config please read
+[the 2.4 variables
+docs](https://doc.dovecot.org/2.4.1/core/settings/variables.html). and
+[upgrade
+documentation](https://doc.dovecot.org/main/installation/upgrade/2.3-to-2.4.html).
 
 ## run 
 
-An example docker invocation, with configuration loaded from 
-`/tmp/dovecot`, which also holds the `users.db` file.
+An example docker invocation, with configuration loaded from  the
+current directory, which also holds the `users.db` file provided here:
 
 ```
 docker run -p 1143:143 -p 1993:993 \
-           -v /tmp/dovecot:/etc/dovecot \
+           -v ./:/etc/dovecot \
               dovecot/dovecot:latest
 ```
 
@@ -96,6 +113,22 @@ Other examples:
   an example of migrating an older dovecot.conf to the new 2.4 syntax.
 
 ## notes
+
+To read out the default `dovecot.conf` from the Docker image, do
+something like the following:
+
+```
+docker run -p 1143:143 -p 1993:993 dovecot/dovecot:latest
+CONT_NAME=$(docker container ls --filter="ancestor=dovecot/dovecot:latest" --format='{{.Names}}')
+docker cp ${CONT_NAME}:/etc/dovecot/dovecot.conf /tmp/d.conf
+```
+
+The dovecot binaries are at `/dovecot/bin` in the container. You can use
+these if needed using exec, for example:
+
+```
+docker exec ${CONT_NAME} /dovecot/bin/doveadm config imap
+```
 
 The main configuration reference for Dovecot CE 2.4.x is
 [here](https://doc.dovecot.org/2.4.1/core/settings/variables.html).
